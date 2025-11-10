@@ -1,0 +1,42 @@
+
+Found a 'test' script in the Anchor.toml. Running it as a test suite!
+
+Running test suite: "/home/n4beel/Desktop/Projects/arcium-examples/share_medical_records/Anchor.toml"
+
+yarn run v1.22.22
+$ /home/n4beel/Desktop/Projects/arcium-examples/share_medical_records/node_modules/.bin/ts-mocha -p ./tsconfig.json -t 1000000 'tests/**/*.ts'
+(node:84380) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/n4beel/Desktop/Projects/arcium-examples/share_medical_records/tests/share_medical_records.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /home/n4beel/Desktop/Projects/arcium-examples/share_medical_records/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+  ShareMedicalRecords
+MXE x25519 pubkey is Uint8Array(32) [
+   65,  11, 186,  84,  20, 228,  71, 169,
+   45, 160, 145, 202, 182, 249, 163, 207,
+   29,  90, 144,  73, 197,  27,  53,  39,
+  208, 192,  73, 140, 142, 243, 102,  94
+]
+Initializing share patient data computation definition
+Comp def pda is  PublicKey [PublicKey(EVgXKXzbzyxPqRvXLspThrxkJt3MYqVDg2AkdDYAxyRu)] {
+  _bn: <BN: c880e19738b5dda8d9107f3a5e3f42937d2ada56c31e62b2b0d6d8a8b8a1ce0c>
+}
+    1) can store and share patient data confidentially!
+
+
+  0 passing (2s)
+  1 failing
+
+  1) ShareMedicalRecords
+       can store and share patient data confidentially!:
+     Error: AnchorError thrown in programs/arcium/src/instructions/computation_definition.rs:77. Error Code: InvalidAuthority. Error Number: 6000. Error Message: The given authority is invalid.
+      at AnchorError.parse (node_modules/@coral-xyz/anchor/src/error.ts:152:14)
+      at translateError (node_modules/@coral-xyz/anchor/src/error.ts:277:35)
+      at MethodsBuilder.rpc [as _rpcFn] (node_modules/@coral-xyz/anchor/src/program/namespace/rpc.ts:35:29)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+
+
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
